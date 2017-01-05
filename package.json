@@ -1,0 +1,38 @@
+{
+  "name": "npm-version-tree",
+  "version": "1.0.0",
+  "description": "Fetch a dependency version tree for a package",
+  "main": "index.js",
+  "repository": "shellscape/npm-version-tree",
+  "author": {
+    "name": "Andrew Powell",
+    "email": "andrew@shellscape.org",
+    "url": "shellscape.org"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "npm",
+    "info",
+    "semver",
+    "module",
+    "version",
+    "check",
+    "checker",
+    "quality",
+    "report",
+    "verify",
+    "enforce",
+    "simple",
+    "conflict"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1"
+  }
+}
