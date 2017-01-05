@@ -1,6 +1,6 @@
 {
   "name": "npm-version-tree",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Fetch a dependency version tree for a package",
   "main": "dist/index.js",
   "repository": "shellscape/npm-version-tree",
@@ -14,7 +14,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "prepublish": "in-publish && gulp build || :",
+    "prepublish": "node in-publish && gulp build || :",
     "test": "gulp"
   },
   "keywords": [
