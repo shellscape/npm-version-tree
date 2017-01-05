@@ -9,5 +9,8 @@ node_js:
 before_install:
   - npm install -g gulp --loglevel=silent
 
+script:
+  - gulp test
+
 matrix:
   fast_finish: true
