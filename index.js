@@ -3,7 +3,6 @@
 const npm = require('npm');
 const semver = require('semver');
 
-const tree = {};
 const silent = true;
 
 const registry = {
@@ -48,7 +47,7 @@ const registry = {
   }
 };
 
-async function traverse (module) {
+async function traverse (module, tree) {
   let info,
     deps,
     meta;
@@ -65,7 +64,7 @@ async function traverse (module) {
   meta = {
     semver: module.mask || info.version,
     version: info.version,
-    parent: module.parent
+    parent: module.parent || null
   };
 
   if (!tree[module.name]) {
@@ -77,22 +76,24 @@ async function traverse (module) {
 
   return await Promise.all(deps.map(async (dep) => {
     let mask = info.dependencies[dep];
-    await traverse({ name: dep, mask: mask, parent: module.name });
+    await traverse({ name: dep, mask: mask, parent: module.name || null }, tree);
   }));
 }
 
 module.exports = {
   async fetch (pkg) {
+    let tree = {},
+      sorted;
 
     await registry.init();
 
     if (typeof pkg === 'string') {
-      pkg = await registry.fetch(pkg);
+      pkg = await registry.info(pkg);
     }
 
-    await Promise.resolve(traverse(pkg));
+    await Promise.resolve(traverse(pkg, tree));
 
-    let sorted = Object.keys(tree)
+    sorted = Object.keys(tree)
       .sort()
       .reduce((result, key) => (result[key] = tree[key], result), {});
 
