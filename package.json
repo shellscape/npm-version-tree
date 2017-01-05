@@ -48,6 +48,7 @@
     "in-publish": "^2.0.0"
   },
   "dependencies": {
-    "npm": "^4.0.5"
+    "npm": "^4.0.5",
+    "semver": "^5.3.0"
   }
 }
