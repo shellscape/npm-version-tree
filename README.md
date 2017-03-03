@@ -1,6 +1,13 @@
 # npm-version-tree [![Build Status](https://travis-ci.org/shellscape/npm-version-tree.svg?branch=master)](https://travis-ci.org/shellscape/npm-version-tree)
 
-> Fetch a dependency version tree for a package
+Fetch a dependency version tree for a package
+
+## &nbsp;
+<p align="center">
+  <b>:rocket: &nbsp; Are you ready to tackle ES6 and hone your JavaScript Skills?</b> &nbsp; :rocket:<br/>
+  Check out these outstanding <a href="https://es6.io/">ES6 courses</a> by <a href="https://github.com/wesbos">@wesbos</a>
+</p>
+---
 
 ## Install
 
