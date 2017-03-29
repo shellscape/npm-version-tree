@@ -1,6 +1,6 @@
 {
   "name": "npm-version-tree",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Fetch a dependency version tree for a package",
   "main": "dist/index.js",
   "repository": "shellscape/npm-version-tree",
