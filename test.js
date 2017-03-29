@@ -11,7 +11,7 @@ const expected = {
   eyes: [ { semver: '0.1.x', version: '0.1.1', parent: 'winston' } ],
   isstream: [ { semver: '0.1.x', version: '0.1.0', parent: 'winston' } ],
   'stack-trace': [ { semver: '0.0.x', version: '0.0.1', parent: 'winston' } ],
-  winston: [ { semver: '2.3.0', version: '2.3.0', parent: null } ]
+  winston: [ { semver: '2.3.1', version: '2.3.1', parent: null } ]
 };
 
 describe('npm-version-tree', () => {
