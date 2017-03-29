@@ -16,9 +16,10 @@ const expected = {
 
 describe('npm-version-tree', () => {
 
-  it('should fetch a version tree', async () => {
-    let tree = await vertree.fetch('winston');
-
-    expect(tree).to.deep.equal(expected);
+  it('should fetch a version tree', (done) => {
+    vertree.fetch('winston').then((result) => {
+      expect(result).to.deep.equal(expected);
+      done();
+    });
   });
 });
