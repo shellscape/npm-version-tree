@@ -34,8 +34,8 @@ gulp.task('build', ['clean'], () => {
   let babel = require('gulp-babel');
 
   return gulp.src('index.js')
-          .pipe(babel())
-          .pipe(gulp.dest('dist/'));
+    .pipe(babel())
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('default', ['lint']);
