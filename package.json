@@ -43,7 +43,7 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
-    "gulp-eslint": "^4.0.0",
+    "gulp-eslint": "^4.0.2",
     "gulp-mocha": "^4.2.0",
     "in-publish": "^2.0.0"
   },
